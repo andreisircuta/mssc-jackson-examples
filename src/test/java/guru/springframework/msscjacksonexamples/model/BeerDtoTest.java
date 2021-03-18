@@ -22,15 +22,12 @@ class BeerDtoTest extends BaseTest {
 
         String jsonString = objectMapper.writeValueAsString(beerDto);
         System.out.println(jsonString);
-//        assertEquals("{\"id\":\"6fcea6d4-8556-4792-98c5-dc48f8bad3eb\",\"beerName\":\"Beer name\",\"beerStyle\":\"Ale\",\"upc\":1231200000,\"price\":12.33,\"createdDate\":\"2021-03-18T15:40:50.475332+02:00\",\"lastUpdatedDate\":\"2021-03-18T15:40:50.476003+02:00\"}",
-//                jsonString);
     }
 
     @Test
     public void deserielizeDto() throws IOException {
-        String json = "{\"beerId\":\"6fcea6d4-8556-4792-98c5-dc48f8bad3eb\",\"beerName\":\"Beer name\",\"beerStyle\":\"Ale\",\"upc\":1231200000,\"price\":12.33,\"createdDate\":\"2021-03-18T15:40:50.475332+02:00\",\"lastUpdatedDate\":\"2021-03-18T15:40:50.476003+02:00\"}";
+        String json = "{\"beerName\":\"Beer name\",\"beerStyle\":\"Ale\",\"upc\":1231200000,\"price\":\"12.33\",\"createdDate\":\"2021-03-18T16:49:52+0200\",\"lastUpdatedDate\":\"2021-03-18T16:49:52.023033+02:00\",\"myLocalDate\":\"20210318\",\"beerId\":\"10926aa7-7c9b-459a-82fe-1b38ca4a858a\"}";
         BeerDto beerDto = objectMapper.readValue(json, BeerDto.class);
-//        assertEquals(getBeerDto(), beerDto);
         System.out.println(beerDto);
     }
 }
