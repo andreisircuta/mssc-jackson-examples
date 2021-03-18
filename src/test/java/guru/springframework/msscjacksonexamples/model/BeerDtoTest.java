@@ -8,8 +8,6 @@ import org.springframework.boot.test.autoconfigure.json.JsonTest;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @JsonTest//json environment to work with
 class BeerDtoTest extends BaseTest {
 
